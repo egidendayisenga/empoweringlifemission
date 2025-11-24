@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Gold from logo */
+    --primary: 45 93% 58%;
+    --primary-foreground: 0 0% 10%;
+
+    /* Light blue from logo */
+    --secondary: 197 71% 73%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 45 93% 58%;
+
+    --radius: 1rem;
+
+    /* NGO Brand Colors */
+    --ngo-gold: 45 93% 58%;
+    --ngo-blue: 197 71% 73%;
+    --ngo-warm: 30 100% 97%;
+    --ngo-text: 0 0% 20%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(45 93% 58% / 0.9), hsl(197 71% 73% / 0.9));
+    --gradient-warm: linear-gradient(180deg, hsl(0 0% 100%), hsl(30 100% 97%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.08);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.06);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
