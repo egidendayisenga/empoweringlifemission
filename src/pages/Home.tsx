@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, GraduationCap, HandHeart, TrendingUp, Building, Quote, CheckCircle, ArrowRight } from "lucide-react";
+import { TypeAnimation } from 'react-type-animation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -39,18 +40,21 @@ const Home = () => {
       description: "Providing quality education and learning resources to underserved communities.",
       image: photoChild2,
       icon: GraduationCap,
+      link: "/programs/education",
     },
     {
       title: "Community Health",
       description: "Healthcare access, nutrition programs, and health education initiatives.",
       image: photoIndoor,
       icon: Heart,
+      link: "/programs/health",
     },
     {
       title: "Skills Training",
       description: "Vocational training for women and youth to build sustainable livelihoods.",
       image: photoGroup2,
       icon: TrendingUp,
+      link: "/programs/skills",
     },
   ];
 
@@ -90,7 +94,26 @@ const Home = () => {
       </div>
       
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-background mb-10 animate-slide-up leading-tight relative overflow-hidden">
-        Empowering Communities,
+        Empowering{' '}
+        <TypeAnimation
+          sequence={[
+            'Communities',
+            2000,
+            'Families',
+            2000,
+            'Youth',
+            2000,
+            'Women',
+            2000,
+            'Children',
+            2000,
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
+        />
+        ,
         <br />
         <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-fade-in relative z-10">
           Transforming Lives
@@ -104,19 +127,21 @@ const Home = () => {
       
       <div className="flex flex-col sm:flex-row gap-8 justify-center mb-20 animate-fade-in">
         <Link to="/donate">
-          <Button size="sm" className="bg-primary hover:bg-primary/90 hover:scale-110 shadow-lg hover:shadow-2xl transition-transform text-primary-foreground font-bold px-12 py-8 text-lg rounded-xl">
-            Donate Now
-            <Heart className="ml-3" size={22} />
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-12 py-6 text-lg rounded-xl shadow-2xl hover:shadow-[0_0_40px_rgba(255,199,0,0.4)] hover:scale-110 transition-all duration-300 relative overflow-hidden group">
+            <span className="relative z-10">Donate Now</span>
+            <Heart className="ml-3 relative z-10 group-hover:animate-pulse" size={22} />
+            <span className="absolute inset-0 bg-gradient-to-r from-primary to-primary-foreground opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
           </Button>
         </Link>
         <Link to="/programs">
           <Button
-            size="sm"
+            size="lg"
             variant="outline"
-            className="bg-background/90 backdrop-blur-md border-2 border-background hover:bg-background text-foreground hover:scale-110 shadow-lg hover:shadow-2xl transition-transform font-bold px-12 py-8 text-lg rounded-xl"
+            className="bg-background/90 backdrop-blur-md border-2 border-background hover:bg-background text-foreground font-bold px-12 py-6 text-lg rounded-xl shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-110 transition-all duration-300 relative overflow-hidden group"
           >
-            View Our Programs
-            <ArrowRight className="ml-3" size={22} />
+            <span className="relative z-10">View Our Programs</span>
+            <ArrowRight className="ml-3 relative z-10 group-hover:translate-x-2 transition-transform" size={22} />
+            <span className="absolute inset-0 bg-gradient-to-r from-background to-foreground opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
           </Button>
         </Link>
       </div>
@@ -193,7 +218,7 @@ const Home = () => {
                   <program.icon className="w-10 h-10 text-primary mb-4 animate-pulse" />
                   <h3 className="text-xl font-bold text-foreground mb-3">{program.title}</h3>
                   <p className="text-muted-foreground mb-4">{program.description}</p>
-                  <Link to="/programs">
+                  <Link to={program.link}>
                     <Button variant="link" className="text-primary p-0 h-auto font-semibold group">
                       Learn More <ArrowRight className="ml-1 inline-block group-hover:translate-x-1 transition-transform" size={16} />
                     </Button>

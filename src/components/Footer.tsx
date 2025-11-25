@@ -59,12 +59,27 @@ const Footer = () => {
 
           <div>
             <h4 className="font-semibold mb-4">Programs</h4>
-            <ul className="space-y-2 text-sm text-background/80">
-              <li>Education Empowerment</li>
-              <li>Community Health</li>
-              <li>Skills Training</li>
-              <li>Food & Basic Needs</li>
-              <li>Community Outreach</li>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/programs/education" className="text-background/80 hover:text-primary transition-colors">
+                  Education Empowerment
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs/health" className="text-background/80 hover:text-primary transition-colors">
+                  Community Health
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs/skills" className="text-background/80 hover:text-primary transition-colors">
+                  Skills Training
+                </Link>
+              </li>
+              <li>
+                <Link to="/programs" className="text-background/80 hover:text-primary transition-colors">
+                  View All Programs
+                </Link>
+              </li>
             </ul>
           </div>
 
