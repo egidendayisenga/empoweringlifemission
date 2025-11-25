@@ -94,26 +94,7 @@ const Home = () => {
       </div>
       
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-background mb-10 animate-slide-up leading-tight relative overflow-hidden">
-        Empowering{' '}
-        <TypeAnimation
-          sequence={[
-            'Communities',
-            2000,
-            'Families',
-            2000,
-            'Youth',
-            2000,
-            'Women',
-            2000,
-            'Children',
-            2000,
-          ]}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-          className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
-        />
-        ,
+        Empowering Communities,
         <br />
         <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-fade-in relative z-10">
           Transforming Lives
