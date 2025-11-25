@@ -12,6 +12,9 @@ import GetInvolved from "./pages/GetInvolved";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import EducationEmpowerment from "./pages/programs/EducationEmpowerment";
+import CommunityHealth from "./pages/programs/CommunityHealth";
+import SkillsTraining from "./pages/programs/SkillsTraining";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/programs/education" element={<EducationEmpowerment />} />
+          <Route path="/programs/health" element={<CommunityHealth />} />
+          <Route path="/programs/skills" element={<SkillsTraining />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/donate" element={<Donate />} />
