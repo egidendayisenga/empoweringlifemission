@@ -87,12 +87,8 @@ const Contact = () => {
         </div>
       </section>
 
-      <section 
-        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${photoChild3})` }}
-      >
-        <div className="absolute inset-0 bg-background/95" />
-        <div className="relative z-10 max-w-5xl mx-auto">
+      <section className="py-20 px-4 bg-background">
+        <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">Send Us a Message</h2>
