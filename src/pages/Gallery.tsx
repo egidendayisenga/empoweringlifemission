@@ -53,12 +53,8 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section 
-        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${photoChild2})` }}
-      >
-        <div className="absolute inset-0 bg-background/95" />
-        <div className="relative z-10 max-w-7xl mx-auto">
+      <section className="py-20 px-4 bg-ngo-warm">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-foreground mb-4">Photo Gallery</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

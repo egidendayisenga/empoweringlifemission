@@ -113,12 +113,8 @@ const Programs = () => {
         </div>
       </section>
 
-      <section 
-        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${programHealth})` }}
-      >
-        <div className="absolute inset-0 bg-background/95" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-background">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-foreground mb-6">Program Approach</h2>
           <div className="space-y-6 text-lg text-muted-foreground text-left">
             <p>
