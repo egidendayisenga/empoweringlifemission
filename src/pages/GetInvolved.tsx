@@ -174,18 +174,22 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 to-secondary/10">
-        <div className="max-w-4xl mx-auto">
+      <section 
+        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${photoChild5})` }}
+      >
+        <div className="absolute inset-0 bg-foreground/90" />
+        <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Partnership Opportunities</h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <h2 className="text-4xl font-bold text-background mb-4">Partnership Opportunities</h2>
+            <p className="text-lg text-background/80 mb-8">
               We welcome partnerships with organizations, businesses, and institutions that share our vision for
               community empowerment.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-lg bg-background/95 backdrop-blur">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">Corporate Partnerships</h3>
                 <p className="text-muted-foreground mb-4">
@@ -198,7 +202,7 @@ const GetInvolved = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-lg bg-background/95 backdrop-blur">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">Institutional Collaboration</h3>
                 <p className="text-muted-foreground mb-4">

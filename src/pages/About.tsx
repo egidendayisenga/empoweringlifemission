@@ -54,8 +54,12 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-4xl mx-auto">
+      <section 
+        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${photoIndoor})` }}
+      >
+        <div className="absolute inset-0 bg-background/95" />
+        <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-6">Our Story</h2>
             <div className="space-y-4 text-lg text-muted-foreground text-left">
@@ -79,10 +83,17 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-ngo-warm">
-        <div className="max-w-7xl mx-auto">
+      <section 
+        className="relative py-20 px-4 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${photoGroup1})` }}
+      >
+        <div className="absolute inset-0 bg-foreground/90" />
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-background mb-4">Our Mission & Vision</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-xl bg-background/95 backdrop-blur">
               <CardContent className="p-8">
                 <Target className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
@@ -93,7 +104,7 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg">
+            <Card className="border-none shadow-xl bg-background/95 backdrop-blur">
               <CardContent className="p-8">
                 <Eye className="w-12 h-12 text-secondary mb-4" />
                 <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
